@@ -1,7 +1,7 @@
 function Footer() {
     return(
         <footer>    
-        This website is reserved by io 
+        This website is rights reserved by io 
         </footer>
     )
     
