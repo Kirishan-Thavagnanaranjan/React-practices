@@ -10,8 +10,10 @@
   box-shadow: 0 0 10px rgba(0,0,0,0);
   transition: box-shadow 0.3s ease-in-out;
   text-align: center;
+  
 }
 
 .card img{
   width: 200px;
+  height: fit-content;
 }

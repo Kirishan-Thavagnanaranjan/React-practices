@@ -10,7 +10,13 @@ function Course(props){
             <p> {props.price} </p> 
             <button> Enroll</button>
         </div>
-    )
+    );
+}
+
+Course.defaultProps = {
+    name: "Code IO Course",
+    price: "$0.00",
+    image: HTML
 }
 
 export default Course;
