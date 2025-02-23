@@ -14,12 +14,13 @@ function App() {
 
   return (
     <>
-    <Course name = "HTML FULL Course" price ="$199" image={html}/>
-    <Course name = "CSS FULL Course" price ="$199" image={css}/>
-    <Course name = "JS FULL Course" price ="$199" image={js}/>
+    <Course name = "HTML FULL Course" price ="$199" image={html} rating = {5} show = {true}/>
+    <Course name = "CSS FULL Course" price ="$199" image={css} rating = {5} show = {true}/>
+    <Course name = "JS FULL Course" price ="$199" image={js} rating = {5} show = {true}/>
   
     </>
   )
 }
+
 
 export default App

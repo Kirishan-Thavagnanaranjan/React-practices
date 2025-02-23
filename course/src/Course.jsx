@@ -1,22 +1,40 @@
-import HTML from "./assets/HTML.png"
+import HTML from "./assets/HTML.jpg"
+import PropTypes from 'prop-Types'
 const course1 = "HTML"
 
 function Course(props){
-    return (
+    if (props.show == true){
+        return (
 
-        <div className="card">
-            <img src={props.image} alt=""/>
-            <h3>{props.name} </h3>
-            <p> {props.price} </p> 
-            <button> Enroll</button>
-        </div>
-    );
+            <div className="card">
+                <img src={props.image} alt=""/>
+                <h3>{props.name} </h3>
+                <p> {props.price} </p> 
+                <span>{props.rating}</span><br/>
+                <button> Enroll</button>
+            </div>
+        );
+    }
+        else{
+            return(
+                <div className="card"> Cousrse not available </div>
+            )
+        }
+    
+    
 }
 
 Course.defaultProps = {
     name: "Code IO Course",
     price: "$0.00",
-    image: HTML
+    image: HTML,
+    rating: 5
+}
+
+Course.propsTypes={
+    name:PropTypes.string,
+    rating:PropTypes.number,
+    show:PropTypes.bool
 }
 
 export default Course;
