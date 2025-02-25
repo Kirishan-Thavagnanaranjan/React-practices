@@ -3,7 +3,7 @@ import PropTypes from 'prop-Types'
 const course1 = "HTML"
 
 function Course(props){
-    if (props.show == true){
+
         return (
 
             <div className="card">
@@ -14,12 +14,8 @@ function Course(props){
                 <button> Enroll</button>
             </div>
         );
-    }
-        else{
-            return(
-                <div className="card"> Cousrse not available </div>
-            )
-        }
+    
+       
     
     
 }
