@@ -4,6 +4,11 @@ const course1 = "HTML"
 
 function Course(props){
 
+    function BuyCourse(discount,e){
+        console.log(props.name , "Purchased with" , discount , "%discount");
+        console.log(e);
+    }
+
         return (
 
            props.name && <div className="card">
@@ -11,7 +16,7 @@ function Course(props){
                 <h3>{props.name} </h3>
                 <p> ${props.price} </p> 
                 <span>{props.rating}</span><br/>
-                <button> Enroll</button>
+                <button onClick={(event) =>BuyCourse(20,event)}> Buy Now</button>
             </div>
         );
     
