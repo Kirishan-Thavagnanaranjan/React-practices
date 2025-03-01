@@ -3,10 +3,12 @@ import PropTypes from 'prop-Types'
 const course1 = "HTML"
 
 function Course(props){
+    let purchase = false;
 
     function BuyCourse(discount,e){
         console.log(props.name , "Purchased with" , discount , "%discount");
         console.log(e);
+        purchase = true;
     }
 
         return (
