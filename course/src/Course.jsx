@@ -1,14 +1,15 @@
+import { useState } from "react";
 import HTML from "./assets/HTML.jpg"
 import PropTypes from 'prop-Types'
 const course1 = "HTML"
 
 function Course(props){
-    let purchase = false;
+    const[purchase,setpurchase] = useState(false);
 
     function BuyCourse(discount,e){
         console.log(props.name , "Purchased with" , discount , "%discount");
         console.log(e);
-        purchase = true;
+        setpurchase(true);
     }
 
         return (
@@ -19,6 +20,7 @@ function Course(props){
                 <p> ${props.price} </p> 
                 <span>{props.rating}</span><br/>
                 <button onClick={(event) =>BuyCourse(20,event)}> Buy Now</button>
+                <p>{purchase ? "All ready purchased" :"Get it now"} </p>
             </div>
         );
     
