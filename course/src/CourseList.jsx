@@ -5,7 +5,7 @@ import js from "./assets/js.png"
 import react from "./assets/react.jpg"
 
 function CourseList () {
-    const courses= [
+    const [courses,setcourses]= ([
         {
             name: "HTML Full Course",
             price: 499,
@@ -31,7 +31,7 @@ function CourseList () {
             image: react,
             rating: 5
         }
-    ];
+    ]);
 
     // Sorting function
 
