@@ -19,7 +19,8 @@ function Course(props){
                 <h3>{props.name} </h3>
                 <p> ${props.price} </p> 
                 <span>{props.rating}</span><br/>
-                <button onClick={(event) =>BuyCourse(20,event)}> Buy Now</button>
+                <button onClick={(event) =>BuyCourse(20,event)}> Buy Now</button> &nbsp;
+                <button onClick={()=>props.delete(props.id)}>Delete</button>
                 <p>{purchase ? "All ready purchased" :"Get it now"} </p>
             </div>
         );
@@ -36,7 +37,7 @@ Course.defaultProps = {
     rating: 5
 }
 
-Course.propsTypes={
+Course.propTypes={
     name:PropTypes.string,
     rating:PropTypes.number,
     show:PropTypes.bool
