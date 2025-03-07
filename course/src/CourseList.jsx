@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Course from "./Course"
 import html from "./assets/HTML.jpg"
 import css from "./assets/css.jpg"
@@ -39,6 +39,13 @@ function CourseList () {
             rating: 5
         }
     ]);
+    const[dummy,setdummy] = useState([true]);
+
+    useEffect(() =>{
+        console.log("Use Effect called");
+        console.log(dummy);
+
+    })
 
     function handleDelete(id) {
         const newCourses = courses.filter((course) => course.id !==id)
@@ -66,6 +73,7 @@ function CourseList () {
 return (
     <>
     {coursesList}
+    <button onClick={()=> {setdummy(false)}}>Dummy Button</button>
     </>
 );
 }
